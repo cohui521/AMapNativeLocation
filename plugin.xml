@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.cheng.cordova.amap.nativelocation" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AMapNativeLocation</name>
+
+    <preference name="API_KEY" />
+
+    <js-module name="AMapNativeLocation" src="www/AMapNativeLocation.js">
+        <clobbers target="cordova.plugins.AMapNativeLocation"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AMapNativeLocation">
+                <param name="android-package" value="com.cheng.cordova.amap.nativelocation.AMapNativeLocation"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <service android:name="com.amap.api.location.APSService" />
+            <meta-data android:name="com.amap.api.v2.apikey" android:value="$API_KEY" />
+        </config-file>
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <!--用于进行网络定位-->
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <!--用于访问GPS定位-->
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+            <!--用于访问网络，网络定位需要上网-->
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <!--用于读取手机当前的状态-->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <!--用于写入缓存数据到扩展存储卡-->
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <!--用于申请调用A-GPS模块-->
+            <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+        </config-file>
+        <source-file src="src/android/AMapNativeLocation.java" target-dir="src/com/cheng/cordova/amap/nativelocation"/>
+        <lib-file src="src/android/libs/AMap_Location_V4.0.1_20180426.jar" arch="device"/>
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="AMapNativeLocation">
+                <param name="ios-package" value="AMapNativeLocation"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/AMapNativeLocation.m"/>
+    </platform>
+</plugin>

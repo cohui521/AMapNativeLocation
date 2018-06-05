@@ -1,0 +1,22 @@
+{
+  "name": "com.cheng.cordova.amap.nativelocation",
+  "version": "1.0.0",
+  "description": "ionic3使用高德地图定位，不使用JS定位",
+  "cordova": {
+    "id": "com.cheng.cordova.amap.nativelocation",
+    "platforms": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cohui521/AMapNativeLocation.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cohui521/AMapNativeLocation/issues"
+  },
+  "homepage": "https://github.com/cohui521/AMapNativeLocation#readme"
+}
