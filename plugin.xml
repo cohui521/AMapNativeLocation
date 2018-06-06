@@ -19,23 +19,23 @@
             <meta-data android:name="com.amap.api.v2.apikey" android:value="$API_KEY" />
         </config-file>
         <config-file parent="/manifest" target="AndroidManifest.xml">
-            <!--ÓÃÓÚ½øÐÐÍøÂç¶¨Î»-->
+            <!--ç”¨äºŽè¿›è¡Œç½‘ç»œå®šä½-->
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-            <!--ÓÃÓÚ·ÃÎÊGPS¶¨Î»-->
+            <!--ç”¨äºŽè®¿é—®GPSå®šä½-->
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-            <!--ÓÃÓÚ»ñÈ¡ÔËÓªÉÌÐÅÏ¢£¬ÓÃÓÚÖ§³ÖÌá¹©ÔËÓªÉÌÐÅÏ¢Ïà¹ØµÄ½Ó¿Ú-->
+            <!--ç”¨äºŽèŽ·å–è¿è¥å•†ä¿¡æ¯ï¼Œç”¨äºŽæ”¯æŒæä¾›è¿è¥å•†ä¿¡æ¯ç›¸å…³çš„æŽ¥å£-->
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-            <!--ÓÃÓÚ·ÃÎÊwifiÍøÂçÐÅÏ¢£¬wifiÐÅÏ¢»áÓÃÓÚ½øÐÐÍøÂç¶¨Î»-->
+            <!--ç”¨äºŽè®¿é—®wifiç½‘ç»œä¿¡æ¯ï¼Œwifiä¿¡æ¯ä¼šç”¨äºŽè¿›è¡Œç½‘ç»œå®šä½-->
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-            <!--ÓÃÓÚ»ñÈ¡wifiµÄ»ñÈ¡È¨ÏÞ£¬wifiÐÅÏ¢»áÓÃÀ´½øÐÐÍøÂç¶¨Î»-->
+            <!--ç”¨äºŽèŽ·å–wifiçš„èŽ·å–æƒé™ï¼Œwifiä¿¡æ¯ä¼šç”¨æ¥è¿›è¡Œç½‘ç»œå®šä½-->
             <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-            <!--ÓÃÓÚ·ÃÎÊÍøÂç£¬ÍøÂç¶¨Î»ÐèÒªÉÏÍø-->
+            <!--ç”¨äºŽè®¿é—®ç½‘ç»œï¼Œç½‘ç»œå®šä½éœ€è¦ä¸Šç½‘-->
             <uses-permission android:name="android.permission.INTERNET"/>
-            <!--ÓÃÓÚ¶ÁÈ¡ÊÖ»úµ±Ç°µÄ×´Ì¬-->
+            <!--ç”¨äºŽè¯»å–æ‰‹æœºå½“å‰çš„çŠ¶æ€-->
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-            <!--ÓÃÓÚÐ´Èë»º´æÊý¾Ýµ½À©Õ¹´æ´¢¿¨-->
+            <!--ç”¨äºŽå†™å…¥ç¼“å­˜æ•°æ®åˆ°æ‰©å±•å­˜å‚¨å¡-->
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-            <!--ÓÃÓÚÉêÇëµ÷ÓÃA-GPSÄ£¿é-->
+            <!--ç”¨äºŽç”³è¯·è°ƒç”¨A-GPSæ¨¡å—-->
             <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
         </config-file>
         <source-file src="src/android/AMapNativeLocation.java" target-dir="src/com/cheng/cordova/amap/nativelocation"/>
